@@ -1,0 +1,47 @@
+name: Deploy website to GitHub Pages
+
+# Deployment is release-driven: it fires only when a version tag of the form
+#   yetty-website-X.Y.Z   (e.g. yetty-website-1.0.0)
+# is pushed. Cut a release with:
+#   git tag yetty-website-1.0.0
+#   git push origin yetty-website-1.0.0
+on:
+  push:
+    tags:
+      - "yetty-website-[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; cancel an older in-flight run if a newer tag lands.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout (the tagged ref)
+        uses: actions/checkout@v4
+
+      - name: Sanity check the site exists
+        run: test -f website/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website/ as the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

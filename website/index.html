@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yetty — Terminal Unchained</title>
+  <meta name="description" content="yetty is a blazing-fast, GPU-accelerated terminal that brings charts, images, video, documents and live dashboards right into your command line — and scrolls them together with your text." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="yetty — Terminal Unchained" />
+  <meta property="og:description" content="The GPU terminal that renders charts, images, video and live dashboards inline — alongside your text, everywhere you work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yetty.ch" />
+  <meta property="og:image" content="https://yetty.ch/assets/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="yetty — Terminal Unchained" />
+  <meta name="twitter:description" content="The GPU terminal that renders charts, images, video and live dashboards inline — alongside your text, everywhere you work." />
+  <meta name="twitter:image" content="https://yetty.ch/assets/og-cover.jpg" />
+  <meta name="theme-color" content="#0B1014" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top" aria-label="yetty home">
+        <img src="assets/logo.svg" alt="yetty" height="32" />
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#features">Capabilities</a>
+        <a href="#why">Why yetty</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#start">Get started</a>
+        <a class="btn btn--ghost nav__cta" href="https://github.com/zokrezyl/yetty" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <span class="eyebrow">Terminal, reimagined</span>
+          <h1 class="hero__title">The terminal,<br /><span class="accent">unchained.</span></h1>
+          <p class="hero__lede">
+            yetty is a GPU-accelerated terminal that renders <strong>charts, images,
+            video, documents and live dashboards</strong> right next to your text —
+            and scrolls them together, beautifully, at native speed.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#start">Get started</a>
+            <a class="btn btn--ghost" href="#features">See what it does</a>
+          </div>
+          <ul class="hero__badges">
+            <li><span class="dot"></span> GPU-accelerated</li>
+            <li><span class="dot"></span> Runs everywhere</li>
+            <li><span class="dot"></span> Open source</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__art">
+            <img src="assets/hero-yeti.png" alt="The yetty yeti breaking its chains around a glowing terminal window" width="960" height="553" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS STRIP ===================== -->
+    <section class="strip">
+      <div class="container strip__grid">
+        <div class="strip__item reveal"><span class="strip__num">60fps+</span><span class="strip__label">GPU rendering</span></div>
+        <div class="strip__item reveal"><span class="strip__num">12+</span><span class="strip__label">rich content types</span></div>
+        <div class="strip__item reveal"><span class="strip__num">6</span><span class="strip__label">platforms, one codebase</span></div>
+        <div class="strip__item reveal"><span class="strip__num">100%</span><span class="strip__label">open source</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== SHOWCASE ===================== -->
+    <section class="section showcase" id="showcase">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">See it in action</span>
+          <h2>Your data, rendered where you work</h2>
+          <p class="section__sub">
+            Pipe a CSV to a plot, drop in an image, open a deck — it all lands
+            in the scrollback and moves with your text.
+          </p>
+        </div>
+
+        <div class="showcase__stage reveal">
+          <!-- When a watermark-free, licensed promo clip is available, drop it
+               in here and remove the terminal mockup below:
+          <video class="showcase__video" autoplay muted loop playsinline
+                 poster="assets/brand-art.jpg" preload="none">
+            <source src="assets/yetty-demo.mp4" type="video/mp4" />
+          </video>
+          -->
+
+          <!-- Stylised terminal window showing text + rich content together -->
+          <div class="term" role="img" aria-label="A yetty terminal window showing text output beside an inline chart">
+            <div class="term__bar">
+              <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot"></span>
+              <span class="term__title">yetty — ~/quarter-review</span>
+            </div>
+            <div class="term__body">
+              <p class="term__line"><span class="prompt">❯</span> yetty plot revenue.csv</p>
+              <div class="term__chart">
+                <svg viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+                  <polyline class="chart-line" points="0,96 45,84 90,88 135,60 180,64 225,38 270,30 320,12" />
+                  <polygon class="chart-fill" points="0,96 45,84 90,88 135,60 180,64 225,38 270,30 320,12 320,120 0,120" />
+                  <g class="chart-bars">
+                    <rect x="14" y="84" width="14" height="36"></rect>
+                    <rect x="58" y="72" width="14" height="48"></rect>
+                    <rect x="102" y="76" width="14" height="44"></rect>
+                    <rect x="146" y="52" width="14" height="68"></rect>
+                    <rect x="190" y="56" width="14" height="64"></rect>
+                    <rect x="234" y="34" width="14" height="86"></rect>
+                    <rect x="278" y="22" width="14" height="98"></rect>
+                  </g>
+                </svg>
+              </div>
+              <p class="term__line muted">revenue up <span class="accent">+38%</span> &nbsp;·&nbsp; rendered inline in 4ms</p>
+              <p class="term__line"><span class="prompt">❯</span> yetty show keynote.pdf <span class="cursor">▏</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Capabilities</span>
+          <h2>Everything you need, in one window</h2>
+          <p class="section__sub">
+            Forget juggling a browser, a notebook, a media player and a PDF
+            viewer. yetty brings rich content into the terminal — and keeps it
+            in sync with your work.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 16l3-4 3 2 4-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Charts &amp; dashboards</h3>
+            <p>Pipe data straight to a live, GPU-drawn plot. Perfect for metrics, reports and quick what-ifs — no spreadsheet round-trip.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="8.5" cy="10" r="1.6" fill="currentColor"/><path d="M5 17l4-4 3 3 3-4 4 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Images &amp; media</h3>
+            <p>Open photos, screenshots and graphics inline at full fidelity. Review assets without ever leaving the command line.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M10 9l5 3-5 3V9z" fill="currentColor"/></svg>
+            </div>
+            <h3>Video playback</h3>
+            <p>Play clips and screen recordings right in the scrollback. Onboarding, demos and recordings stay where the work happens.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Documents &amp; PDFs</h3>
+            <p>Render slide decks, contracts and reports inline. Skim a keynote or a one-pager without breaking your flow.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2.4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="2.4" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="2.4" stroke="currentColor" stroke-width="2"/><path d="M7.6 7.6L11 15M16.4 7.6L13 15" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Diagrams &amp; flows</h3>
+            <p>Turn text into crisp diagrams and graphs on the fly — architecture sketches, org charts and process flows, drawn by the GPU.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="2"/><path d="M9 9h6M9 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Interactive widgets</h3>
+            <p>Buttons, sliders and forms live inside the terminal. Build little control panels and tools your whole team can use.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="14" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 19h8M16 9h6v8a2 2 0 01-2 2h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Remote screens</h3>
+            <p>Stream a live remote canvas into a tile. Pair, present or monitor a machine without a separate viewer app.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY ===================== -->
+    <section class="section section--alt" id="why">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Why yetty</span>
+          <h2>Fast where it matters. Rich where it counts.</h2>
+        </div>
+
+        <div class="why">
+          <div class="why__item reveal">
+            <div class="why__num">01</div>
+            <h3>Native GPU speed</h3>
+            <p>Every pixel is drawn on the GPU through a modern graphics pipeline. Massive scrollback, smooth scrolling, instant repaints — even with media on screen.</p>
+          </div>
+          <div class="why__item reveal">
+            <div class="why__num">02</div>
+            <h3>One unified surface</h3>
+            <p>Text and rich content share the same scroll. A chart you printed an hour ago scrolls back into view exactly where you left it — no floating windows, no context loss.</p>
+          </div>
+          <div class="why__item reveal">
+            <div class="why__num">03</div>
+            <h3>Works everywhere</h3>
+            <p>Desktop, mobile and the browser run from a single codebase. The same yetty experience travels with you across every device you use.</p>
+          </div>
+          <div class="why__item reveal">
+            <div class="why__num">04</div>
+            <h3>Open &amp; yours</h3>
+            <p>Fully open source with a clean, language-friendly core. Extend it, embed it, or just trust it — the whole thing is out in the open.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PLATFORMS ===================== -->
+    <section class="section" id="platforms">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Platforms</span>
+          <h2>One terminal, every screen</h2>
+          <p class="section__sub">From your workstation to your phone to a browser tab — yetty follows your work.</p>
+        </div>
+
+        <div class="platforms reveal">
+          <div class="platform"><span class="platform__name">Linux</span></div>
+          <div class="platform"><span class="platform__name">macOS</span></div>
+          <div class="platform"><span class="platform__name">Windows</span></div>
+          <div class="platform"><span class="platform__name">Android</span></div>
+          <div class="platform"><span class="platform__name">iOS</span></div>
+          <div class="platform"><span class="platform__name">Web</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta" id="start">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="container cta__inner reveal">
+        <h2>Ready to unchain your terminal?</h2>
+        <p>yetty is free and open source. Grab the code, follow the build guide, and have rich content scrolling in your shell today.</p>
+        <div class="cta__actions">
+          <a class="btn btn--primary btn--lg" href="https://github.com/zokrezyl/yetty" target="_blank" rel="noopener">Get yetty on GitHub ↗</a>
+          <a class="btn btn--ghost btn--lg" href="https://github.com/zokrezyl/yetty#readme" target="_blank" rel="noopener">Read the docs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo.svg" alt="yetty" height="28" />
+        <p class="footer__tag">Terminal Unchained.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#features">Capabilities</a>
+        <a href="#why">Why yetty</a>
+        <a href="#platforms">Platforms</a>
+        <a href="https://github.com/zokrezyl/yetty" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <p class="footer__copy">© <span id="year">2026</span> yetty · Open source</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
