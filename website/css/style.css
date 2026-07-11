@@ -192,6 +192,22 @@ h1, h2, h3 { line-height: 1.12; letter-spacing: -0.02em; margin: 0; }
 .diag-edge path { stroke-dasharray: 3 3; }
 .diag-note { fill: var(--accent-bright); font-family: 'JetBrains Mono', monospace; font-size: 10px; text-anchor: middle; }
 
+/* ===================== Demo ===================== */
+.demo { padding: 40px 0 24px; }
+.demo__inner { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+.demo__head { max-width: 700px; text-align: center; }
+.demo__head h2 { font-size: clamp(1.8rem, 3.8vw, 2.6rem); font-weight: 800; }
+.demo__frame {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--bg-lifted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(54, 74, 71, 0.4);
+}
+.demo__video { display: block; width: 100%; height: auto; background: var(--bg); }
+
 /* ===================== Capability strip ===================== */
 .caps { border-block: 1px solid var(--border); background: var(--bg-lifted); }
 .caps__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 26px 24px; }

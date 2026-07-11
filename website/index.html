@@ -37,6 +37,7 @@
       </a>
 
       <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#demo">Demo</a>
         <a href="#proof">How it works</a>
         <a href="#engine">Engine</a>
         <a href="#platforms">Platforms</a>
@@ -66,7 +67,7 @@
             panels.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#proof">Watch demo</a>
+            <a class="btn btn--primary" href="#demo">Watch demo</a>
             <a class="btn btn--ghost" href="https://github.com/zokrezyl/yetty" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
           <ul class="hero__badges">
@@ -80,6 +81,33 @@
           <div class="hero__art">
             <img src="assets/hero-yeti.png" alt="The Yetty yeti breaking its chains around a glowing terminal window" width="960" height="553" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEMO ===================== -->
+    <section class="demo" id="demo">
+      <div class="container demo__inner reveal">
+        <div class="demo__head">
+          <span class="eyebrow">Watch demo</span>
+          <h2>See Yetty in one loop</h2>
+          <p class="section__sub">A quick tour of diagrams, previews, plots, and panels rendering right inside the terminal.</p>
+        </div>
+        <div class="demo__frame">
+          <div class="term__bar">
+            <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot"></span>
+            <span class="term__title">yetty — feature tour</span>
+          </div>
+          <video
+            class="demo__video"
+            src="assets/feature-tour.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            aria-label="Yetty feature tour">
+          </video>
         </div>
       </div>
     </section>
